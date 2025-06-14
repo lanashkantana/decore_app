@@ -127,6 +127,7 @@ class _HomePageState extends State<HomePage> {
                                 style: AppStyle.typaragraph12,
                               ),
                             ),
+                            18.verticalSpace,
                 
                             Row(
                              

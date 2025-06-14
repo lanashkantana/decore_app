@@ -1,8 +1,7 @@
 class AppFonts {
   const AppFonts._();
   // Font Family Names
-  static const String poppins = 'assets/fonts/poppins/Poppins-Bold.ttf';
-  static const String leagueSpartan = 'assets/fonts/leagueSpartan/LeagueSpartan-Regular.ttf';
-
+  static const String poppins = 'Poppins';
+  static const String leagueSpartan = 'LeagueSpartan';
 
 }
