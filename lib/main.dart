@@ -15,21 +15,19 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: const Size(375, 812), // iPhone X size, adjust as needed
+      designSize: const Size(375, 812),
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, child) {
-         return MaterialApp.router(
-                    routerConfig: AppRouter.router,
-                    debugShowCheckedModeBanner: false,
-                    theme: getLightTheme(),
-          darkTheme: getDarkTheme(),
+        return MaterialApp.router(
+          routerConfig: AppRouter.router,
+          debugShowCheckedModeBanner: false,
+          theme: getLightTheme(), // يستخدم Google Fonts
+          darkTheme: getDarkTheme(), // كذلك هنا
           themeMode: ThemeMode.light,
-      
         );
       },
-      child:Onboarding(),
-  
+      child: const Onboarding(),
     );
   }
 }

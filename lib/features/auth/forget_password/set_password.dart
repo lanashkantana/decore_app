@@ -95,7 +95,7 @@ class _SetPasswordState extends State<SetPassword> {
                       child: CustomButton(
                         text: "Next",
                         ontap: () {
-                          GoRouter.of(context).push(AppRouter.kHomePage);
+                          GoRouter.of(context).push(AppRouter.kbottomnavbar);
                         },
                         color: AppColors.orangeBrown,
                       ),

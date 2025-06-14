@@ -1,5 +1,6 @@
 import 'package:first_task/core/helpers/app_colors.dart';
 import 'package:first_task/core/helpers/app_images.dart';
+import 'package:first_task/core/helpers/app_route.dart';
 import 'package:first_task/core/helpers/app_style.dart';
 import 'package:first_task/core/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
@@ -157,7 +158,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                         } else {
                           await setSeen();
                           if (!mounted) return;
-                          GoRouter.of(context).go('/home');
+                          GoRouter.of(context).push(AppRouter.kbottomnavbar);
                         }
                       },
                     ),

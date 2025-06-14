@@ -17,7 +17,7 @@ class CustomCatagories extends StatelessWidget {
       scrollDirection: Axis.horizontal,
       itemBuilder: (BuildContext context, int index) {
         return Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 14),
+          padding: const EdgeInsets.only(right: 14),
           child: Container(
             width: 67, // عرض العنصر الواحد
             decoration: BoxDecoration(

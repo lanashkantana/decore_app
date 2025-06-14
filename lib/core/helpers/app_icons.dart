@@ -13,6 +13,18 @@ AppIcons._();
   static const String catagoriesIcon5="assets/icons/catagories_icon5.png";
   static const String addIcon="assets/icons/add_icon.svg";
   static const String loveIcon="assets/icons/love_icon.svg";
+  // 
+  static const String homeIcon="assets/icons/home_icon.svg";
+
+  static const String wishlistIcon="assets/icons/wishlist_icon.svg";
+
+  static const String cartIcon="assets/icons/cart_icon.svg";
+
+  static const String profileIcon="assets/icons/profile_icon.svg";
+
+
+  
+  static const String menuIcon="assets/icons/menu_icon.svg";
 
 
 
