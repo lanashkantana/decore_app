@@ -1,9 +1,5 @@
 class AppConstans {
-// final Color backGroundColor=Color(0xff)
+  AppConstans._();
 
-
-
-
-
-
+  static const String baseUrl = 'https://decor.up.railway.app/';
 }

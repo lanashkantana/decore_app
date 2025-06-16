@@ -10,6 +10,7 @@ environment:
   sdk: ^3.7.2
 
 dependencies:
+  build_runner: ^2.5.0
   cached_network_image: ^3.4.1
   carousel_slider: ^5.1.1
   cupertino_icons: ^1.0.8
@@ -30,6 +31,7 @@ dependencies:
   json_serializable: ^6.9.5
   persistent_bottom_nav_bar: ^6.2.1
   pretty_dio_logger: ^1.4.0
+  redacted: ^1.0.13
   retrofit: ^4.4.2
   retrofit_generator: ^9.2.0
   shared_preferences: ^2.5.3

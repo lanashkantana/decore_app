@@ -1,5 +1,6 @@
-import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter/material.dart';
 
 class CustomCarouselSlider extends StatelessWidget {
   final List<String> images;
@@ -26,12 +27,17 @@ class CustomCarouselSlider extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         onPageChanged: onPageChanged,
       ),
-      items: images.map((imagePath) {
+      items: images.map((imageUrl) {
         return Builder(
           builder: (BuildContext context) {
             return SizedBox(
               width: double.infinity,
-              child: Image.asset(imagePath, fit: BoxFit.fill),
+              child: CachedNetworkImage(
+                imageUrl: imageUrl,
+                fit: BoxFit.fill,
+                placeholder: (context, url) => Center(child: CircularProgressIndicator()),
+                errorWidget: (context, url, error) => const Icon(Icons.broken_image),
+              ),
             );
           },
         );
