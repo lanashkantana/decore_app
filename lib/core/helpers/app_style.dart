@@ -68,10 +68,10 @@ class AppStyle {
     fontWeight: FontWeight.w400,
   );
 
-  static const TextStyle typaragraph12 = TextStyle(
+  static const TextStyle typaragraph14 = TextStyle(
     letterSpacing: 0,
     // height: 15,
-    fontSize: 12,
+    fontSize: 14,
     fontFamily: AppFonts.leagueSpartan,
     fontWeight: FontWeight.w300,
   );

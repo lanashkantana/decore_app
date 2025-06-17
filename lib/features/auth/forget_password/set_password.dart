@@ -35,86 +35,70 @@ class _SetPasswordState extends State<SetPassword> {
         },
       ),
 
-      body: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 50,horizontal: 32),
-       
-          child: ListView(
-            // crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-             
-            Text(
-                  "change the password",
-                  style: AppStyle.title20..copyWith(color: AppColors.charcoalBrown),
-                ),
-              
-              11.verticalSpace,
-             
-              Text(
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
-                  style: AppStyle.subtitle14.copyWith(
-                    color: AppColors.charcoalBrown,
-                  ),
-                ),
-               
-              60.verticalSpace,
-            
-                     
-                         Text(
-                "Password",
-                style: AppStyle.subTilte15.copyWith(
-                  color: AppColors.charcoalBrown,
-                ),
-              ),
-              8.verticalSpace,
-              CustomFormTextField(
-                fillColor: AppColors.iconSquarecolor,
-                hintText: '123456789',
-                obscureText: isObscure,
-                controller: password,
-                keyboardType: TextInputType.visiblePassword,
-                suffixIcon: isObsecureIcon(isConfirm: false),
-              ),
-              23.verticalSpace,
-              Text(
-                "Confirm Password",
-                style: AppStyle.subTilte15.copyWith(
-                  color: AppColors.charcoalBrown,
-                ),
-              ),
-              8.verticalSpace,
-              CustomFormTextField(
-                fillColor: AppColors.iconSquarecolor,
-                hintText: '123456789',
-                obscureText: isObsecureFonfirm,
-                controller: confirmPassword,
-                keyboardType: TextInputType.visiblePassword,
-                suffixIcon: isObsecureIcon(isConfirm: true),
-              ),
-                      33.verticalSpace,
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 75),
-                        child: CustomButton(
-                          text: "Next",
-                          ontap: () {
-                            GoRouter.of(context).push(AppRouter.kbottomnavbar);
-                          },
-                          color: AppColors.orangeBrown,
-                        ),
-                      ),
-                      18.verticalSpace,
-                      Align(
-                        alignment: Alignment.center,
-                        child: InkWell(
-                          onTap: () {
-                            GoRouter.of(context).push(AppRouter.kForgetPassword);
-                          },
-                        ),
-                      ),
-                    ],
-                  ),
-        
-              ),
-            );
+      body:  Padding(
+  padding: const EdgeInsets.symmetric(vertical: 50, horizontal: 32),
+  child: SingleChildScrollView(
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          "change the password",
+          style: AppStyle.title20.copyWith(color: AppColors.charcoalBrown),
+        ),
+        11.verticalSpace,
+        Text(
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+          style: AppStyle.subtitle14.copyWith(color: AppColors.charcoalBrown),
+        ),
+        60.verticalSpace,
+        Text("Password", style: AppStyle.subTilte15.copyWith(color: AppColors.charcoalBrown)),
+        8.verticalSpace,
+        CustomFormTextField(
+          fillColor: AppColors.iconSquarecolor,
+          hintText: '123456789',
+          obscureText: isObscure,
+          controller: password,
+          keyboardType: TextInputType.visiblePassword,
+          suffixIcon: isObsecureIcon(isConfirm: false),
+        ),
+        23.verticalSpace,
+        Text("Confirm Password", style: AppStyle.subTilte15.copyWith(color: AppColors.charcoalBrown)),
+        8.verticalSpace,
+        CustomFormTextField(
+          fillColor: AppColors.iconSquarecolor,
+          hintText: '123456789',
+          obscureText: isObsecureFonfirm,
+          controller: confirmPassword,
+          keyboardType: TextInputType.visiblePassword,
+          suffixIcon: isObsecureIcon(isConfirm: true),
+        ),
+        33.verticalSpace,
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 75),
+          child: CustomButton(
+            text: "Set Password",
+            ontap: () {
+              GoRouter.of(context).push(AppRouter.kbottomnavbar);
+            },
+            color: AppColors.orangeBrown,
+          ),
+        ),
+        18.verticalSpace,
+        // Align(
+        //   alignment: Alignment.center,
+        //   child: InkWell(
+        //     onTap: () {
+        //       GoRouter.of(context).push(AppRouter.kForgetPassword);
+        //     },
+        //     child: Text("Back", style: AppStyle.subtitle14),
+        //   ),
+        // ),
+      ],
+    ),
+  ),
+      ),
+);
+
      
   }
  IconButton isObsecureIcon({required bool isConfirm}) {

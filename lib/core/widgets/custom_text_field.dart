@@ -52,7 +52,7 @@ class _CustomFormTextFieldState extends State<CustomFormTextField> {
   Widget build(BuildContext context) {
     return 
      TextFormField(
-      style: AppStyle.typaragraph12.copyWith(
+      style: AppStyle.typaragraph14.copyWith(
         fontSize: 18.r,
         
         color: widget.colortext??AppColors.colorTextfield,letterSpacing: 0.4,

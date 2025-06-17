@@ -1,7 +1,9 @@
 
 import 'package:first_task/core/helpers/app_colors.dart';
 import 'package:first_task/features/home_page/data/model/get_catagories_model.dart';
+import 'package:first_task/features/home_page/ui/widget/custom_text.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 class CustomCatagories extends StatelessWidget {
   const CustomCatagories({
     super.key,
@@ -18,14 +20,17 @@ class CustomCatagories extends StatelessWidget {
       itemBuilder: (BuildContext context, int index) {
         return Padding(
           padding: const EdgeInsets.only(right: 14),
-          child: Container(
-            width: 67,
+          child:
+          Column(
+              children: [
+                 Container(
+           width: 67,
+      height: 67,
             decoration: BoxDecoration(
-              color: AppColors.lightpink,
+              color: AppColors.verylightblue,
               borderRadius: BorderRadius.circular(14),
             ),
-            child: Column(
-              children: [
+            child: 
                 Center(
                   child: Image.network(
                      "${data[index].icon}",
@@ -35,9 +40,13 @@ class CustomCatagories extends StatelessWidget {
                     
                   ),
                 ),
-                Text(data[index].name.toString()),
+               
+                 ),
+                 2.verticalSpace,
+                
+                 CustomText(text:data[index].name.toString()),
+               
               ],
-            ),
           ),
         );
       },
