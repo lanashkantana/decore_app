@@ -6,6 +6,8 @@ import 'package:first_task/features/bottom_nav_baar.dart';
 import 'package:first_task/features/home_page/ui/home_page.dart';
 import 'package:first_task/features/onboarding_page/ui/on_boarding_page.dart';
 import 'package:first_task/features/splash_screen/ui/splash_page.dart';
+
+import 'package:first_task/features/sub_catagories/ui/sub_catagories.dart';
 import 'package:go_router/go_router.dart';
 
 class AppRouter {
@@ -17,7 +19,7 @@ class AppRouter {
   static const kSetPassword = '/kSetPassword';
   static const kHomePage = '/kHomePage';
   static const kbottomnavbar = '/kbottomnavbar';
-
+//  static const kSubCatagories = '/kSubCatagories';
   static final router = GoRouter(
     routes: [
       GoRoute(path: '/', builder: (context, state) => const SplachView()),
@@ -50,7 +52,17 @@ class AppRouter {
         path: kbottomnavbar,
         builder: (context, state) =>  BottomNavBar(),
       ),
+    //    GoRoute(
+    //     path: kSubCatagories,
+    //     builder: (context, state) {
+    //        final int id = int.parse(state.pathParameters['main_category_id']!);
+    //         // final String  name = state.pathParameters['main_category_id']!;
+    // return SubCatagories(subCatagoreisId: id);
+    //     }
+    //   ),
 
     ],
   );
+
+
 }

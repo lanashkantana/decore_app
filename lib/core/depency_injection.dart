@@ -11,6 +11,9 @@ import 'package:first_task/features/home_page/logic/best_saller_cubit/best_salle
 import 'package:first_task/features/home_page/logic/catagories_cubit/catagories_cubit.dart';
 import 'package:first_task/features/home_page/logic/new_catagories_cubit/new_catagories_cubit.dart';
 import 'package:first_task/features/home_page/logic/slider_cubit/slider_cubit.dart';
+import 'package:first_task/features/sub_catagories/data/repository/sub_catagories_repo.dart';
+import 'package:first_task/features/sub_catagories/data/services/sub_catagories_services.dart';
+import 'package:first_task/features/sub_catagories/logic/sub_catagories_by_id/sub_catagories_by_id_cubit.dart';
 import 'package:get_it/get_it.dart';
 
 final getIt = GetIt.instance;
@@ -33,6 +36,24 @@ void setup() {
   getIt.registerLazySingleton<NewCollectionRepo>(()=>NewCollectionRepo(getIt()));
   
  getIt.registerLazySingleton<NewCollectionServices>(()=>NewCollectionServices(createAndSeetupDio()));
+
+
+
+
+// ////////////
+
+getIt.registerLazySingleton<SubCatagoriesByIdCubit>(()=>SubCatagoriesByIdCubit(getIt()));
+  getIt.registerLazySingleton<SubCatagoriesRepo>(()=>SubCatagoriesRepo(getIt()));
+  
+ getIt.registerLazySingleton<SubCatagoriesServices>(()=>SubCatagoriesServices(createAndSeetupDio()));
+
+
+
+
+
+
+
+
 
 }
 Dio createAndSeetupDio() {

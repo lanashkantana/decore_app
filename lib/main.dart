@@ -8,6 +8,7 @@ import 'package:first_task/features/home_page/logic/catagories_cubit/catagories_
 import 'package:first_task/features/home_page/logic/new_catagories_cubit/new_catagories_cubit.dart';
 import 'package:first_task/features/home_page/logic/slider_cubit/slider_cubit.dart';
 import 'package:first_task/features/onboarding_page/ui/on_boarding_page.dart';
+import 'package:first_task/features/sub_catagories/logic/sub_catagories_by_id/sub_catagories_by_id_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -33,6 +34,7 @@ class MyApp extends StatelessWidget {
             BlocProvider(create: (_) => getIt<CatagoriesCubit>()),
             BlocProvider(create: (_) => getIt<NewCatagoriesCubit>()),
             BlocProvider(create: (_) => getIt<BestSallerCubit>()),
+            BlocProvider(create: (_) => getIt<SubCatagoriesByIdCubit>()),
           ],
           child: MaterialApp.router(
             routerConfig: AppRouter.router,
