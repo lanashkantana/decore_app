@@ -4,6 +4,7 @@ import 'package:first_task/features/home_page/ui/widget/custom_text.dart';
 import 'package:first_task/features/sub_catagories/data/model/sub_catagories_model.dart';
 import 'package:first_task/features/sub_catagories/logic/sub_catagories_by_id/sub_catagories_by_id_cubit.dart';
 import 'package:first_task/features/sub_catagories/logic/sub_catagories_by_id/sub_catagories_by_id_state.dart';
+import 'package:first_task/features/sub_catagories/ui/sub_catagory.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -70,7 +71,12 @@ class _SubCatagoriesState extends State<SubCatagories> {
                          10.verticalSpace,
                         InkWell(
                           onTap: (){
+                            Navigator.of(context).push(MaterialPageRoute(builder: (context)=>SubCatagory(id:getSubCatagories[index].id??1,
+                            name: getSubCatagories[index].name ?? '',
                             
+                            
+                            
+                            )));
                             
                           },
                           child: Container(

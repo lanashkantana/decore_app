@@ -12,8 +12,11 @@ import 'package:first_task/features/home_page/logic/catagories_cubit/catagories_
 import 'package:first_task/features/home_page/logic/new_catagories_cubit/new_catagories_cubit.dart';
 import 'package:first_task/features/home_page/logic/slider_cubit/slider_cubit.dart';
 import 'package:first_task/features/sub_catagories/data/repository/sub_catagories_repo.dart';
+import 'package:first_task/features/sub_catagories/data/repository/sub_catagory_repo.dart';
 import 'package:first_task/features/sub_catagories/data/services/sub_catagories_services.dart';
+import 'package:first_task/features/sub_catagories/data/services/sub_catagory_services.dart';
 import 'package:first_task/features/sub_catagories/logic/sub_catagories_by_id/sub_catagories_by_id_cubit.dart';
+import 'package:first_task/features/sub_catagories/logic/sub_catagory/sub_catagory_cubit.dart';
 import 'package:get_it/get_it.dart';
 
 final getIt = GetIt.instance;
@@ -46,6 +49,11 @@ getIt.registerLazySingleton<SubCatagoriesByIdCubit>(()=>SubCatagoriesByIdCubit(g
   getIt.registerLazySingleton<SubCatagoriesRepo>(()=>SubCatagoriesRepo(getIt()));
   
  getIt.registerLazySingleton<SubCatagoriesServices>(()=>SubCatagoriesServices(createAndSeetupDio()));
+
+getIt.registerLazySingleton<SubCatagoryCubit>(()=>SubCatagoryCubit(getIt()));
+  getIt.registerLazySingleton<SubCatagoryRepo>(()=>SubCatagoryRepo(getIt()));
+  
+ getIt.registerLazySingleton<SubCatagoryServices>(()=>SubCatagoryServices(createAndSeetupDio()));
 
 
 
